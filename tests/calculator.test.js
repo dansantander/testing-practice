@@ -1,6 +1,6 @@
 import Calculator from '../modules/calculator';
 
-test('add two number', () => {
+test('add two or more numbers', () => {
   expect(Calculator.add(2, 3)).toBe(5);
 });
 
@@ -12,7 +12,7 @@ it('throw error if no parameter passed', () => {
   expect(() => Calculator.add()).toThrow('No parameter passed');
 });
 
-test('subtract two numbers', () => {
+test('subtract two or more numbers', () => {
   expect(Calculator.subtract(2, 3)).toBe(-1);
 });
 
@@ -24,7 +24,7 @@ it('throw error if no parameter passed', () => {
   expect(() => Calculator.subtract()).toThrow('No parameter passed');
 });
 
-test('multiply two numbers', () => {
+test('multiply two or more numbers', () => {
   expect(Calculator.multiply(2, 3)).toBe(6);
 });
 
@@ -36,7 +36,7 @@ it('throw error if no parameter passed', () => {
   expect(() => Calculator.multiply()).toThrow('No parameter passed');
 });
 
-test('divide two numbers', () => {
+test('divide two or more numbers', () => {
   expect(Calculator.divide(10, 2)).toBe(5);
 });
 
