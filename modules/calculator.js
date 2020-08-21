@@ -13,8 +13,26 @@ const Calculator = (() => {
     return args.reduce((total, currentValue) => total + currentValue, 0);
   };
 
+  const subtract = (...args) => {
+    checkErrors(...args);
+    return args.slice(1).reduce((total, currentValue) => total - currentValue, args[0]);
+  };
+
+  const multiply = (...args) => {
+    checkErrors(...args);
+    return args.slice(1).reduce((total, currentValue) => total * currentValue, args[0]);
+  };
+
+  const divide = (...args) => {
+    checkErrors(...args);
+    return args.slice(1).reduce((total, currentValue) => total / currentValue, args[0]);
+  };
+
   return {
     add,
+    subtract,
+    multiply,
+    divide,
   };
 })();
 
